@@ -1,0 +1,27 @@
+﻿@model List<TodoItem>
+@{
+    ViewData["Title"] = "Todo Page";
+}
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td>@item.ToDoStatus </td>
+            </tr>
+        }
+    </tbody>
+</table>
